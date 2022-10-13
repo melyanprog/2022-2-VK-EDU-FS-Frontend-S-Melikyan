@@ -20,5 +20,3 @@ export default function convertBytesToHuman(bytes) {
   let i = Math.floor(Math.log(bytes) / Math.log(k));
   return `${Number((bytes / Math.pow(k, i)).toFixed(2))} ${size[i]}`;
 }
-
-console.log(convertBytesToHuman(10000));
