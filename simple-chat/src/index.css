@@ -1,0 +1,159 @@
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.chat-container{
+    display: flex;
+    height: 100%;
+    min-height: 100%;
+    flex-direction: column;
+    font-family: Roboto;
+}
+
+.chat-header{
+    display: flex;
+    height: 70px;
+    background-color: #791e92;
+    align-items: center;
+}
+
+.profile{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    margin-left: 15px;
+}
+
+.image{
+    width: 55px;
+    height: 55px;
+    border-radius: 30px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2px;
+}
+
+.name{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.online {
+    color: rgba(226, 224, 226, 0.667);
+    font-size: 12px;
+}
+
+.back-button,
+.search-button,
+.menu-button{
+  width: 70px;
+  padding: 0;
+  border: none;
+  background-color: #791e92;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.back-button:active,
+.search-button:active,
+.more-button:active {
+  background-color: #791e92;
+}
+
+.chat-body{
+    overflow: auto;
+    background-color: #f8f8f8;
+    min-height: 100%;
+}
+
+.message {
+    display: flex;
+    width: fit-content;
+    border-radius: 5px;
+    border: 1px solid #bcb7be;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.left {
+    background-color: #ffffff;
+    padding: 12px 12px 0 12px;
+    margin: 7px 7px auto 7px;
+    border-bottom-left-radius: 0;
+}
+
+.right {
+    background-color: #f3e5f5;
+    padding: 12px 12px 0 12px;
+    margin: 7px 7px 7px auto;
+    border-bottom-right-radius: 0;
+}
+
+.text {
+    font-size: 15px;
+}
+
+.data {
+    display: flex;
+    justify-content: flex-end;
+    height: 15px;
+    column-gap: 5px;
+}
+
+.time {
+    font-size: 12px;
+    color: #887f89;
+}
+
+.done-all {
+    color: #612976;
+  }
+
+.form {
+  width: 100%;
+  display: inline-block;
+  border: 1px solid rgba(25, 25, 25, 0.32);
+} 
+
+input[type="submit"] {
+  visibility: collapse;
+}
+
+.form-input {
+  display: flex;
+  align-items: center;
+  border: 0;
+  outline: none;
+  width: calc(100% - 2px);
+  font-size: 12px;
+}
+
+.attachment-button {
+    background-color: #ffffff;
+    color: #777777;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.attachment-button:hover {
+    opacity: 0.8;
+}
