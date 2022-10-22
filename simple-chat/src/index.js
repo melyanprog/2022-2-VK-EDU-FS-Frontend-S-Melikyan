@@ -10,8 +10,8 @@ document.addEventListener(
   getMesagesFromLocalStorage.bind(this)
 );
 
-function handleSubmit(event) {
-  event.preventDefault();
+function handleSubmit() {
+  if (!input.value) return;
   const message = {
     text: input.value,
     time: `${new Date().getHours()}:${new Date().getMinutes()}`,
@@ -19,12 +19,6 @@ function handleSubmit(event) {
   createMessage(message);
   saveMessageToLocalStorage(message);
   input.value = "";
-}
-
-function handleKeyPress(event) {
-  if (event.keyCode === 13) {
-    form.dispatchEvent(new Event("submit"));
-  }
 }
 
 function createMessage(message) {
@@ -51,17 +45,18 @@ function createMessage(message) {
   chat.prepend(messageContainer);
 }
 
-function saveMessageToLocalStorage(message) {
-  let messages = localStorage.getItem("messages");
-  messages = JSON.parse(messages);
-  messages.push(message);
-  localStorage.setItem("messages", JSON.stringify(messages));
+function getMesagesFromLocalStorage() {
+  const count = Number(localStorage.getItem("count"));
+  if (!count) return;
+  for (let i = 1; i <= count; i++) {
+    const message = localStorage.getItem(i);
+    createMessage(JSON.parse(message));
+  }
 }
 
-function getMesagesFromLocalStorage() {
-  let messages = localStorage.getItem("messages");
-  messages = JSON.parse(messages);
-  for (const message of messages) {
-    createMessage(message);
-  }
+function saveMessageToLocalStorage(message) {
+  let count = Number(localStorage.getItem("count")) || 0;
+  count++;
+  localStorage.setItem(count, JSON.stringify(message));
+  localStorage.setItem("count", count);
 }
