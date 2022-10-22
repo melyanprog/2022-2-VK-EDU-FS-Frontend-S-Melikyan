@@ -1,8 +1,14 @@
+html {
+    box-sizing: border-box;
+    width: 100%;
+}
+
 html, body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     height: 100%;
+    width: 100%;
 }
 
 *,
@@ -72,16 +78,12 @@ html, body {
   transition: background-color 0.2s;
 }
 
-.back-button:active,
-.search-button:active,
-.more-button:active {
-  background-color: #791e92;
-}
-
 .chat-body{
-    overflow: auto;
-    background-color: #f8f8f8;
-    min-height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow-y: auto;
+  background-color: #e1e8ed;
 }
 
 .message {
@@ -123,8 +125,9 @@ html, body {
     color: #887f89;
 }
 
-.done-all {
-    color: #612976;
+.status .material-icons,
+.done-all{
+    color: #6e2d84;
   }
 
 .form {
@@ -133,16 +136,12 @@ html, body {
   border: 1px solid rgba(25, 25, 25, 0.32);
 } 
 
-input[type="submit"] {
-  visibility: collapse;
-}
-
 .form-input {
   display: flex;
   align-items: center;
   border: 0;
   outline: none;
-  width: calc(100% - 2px);
+  width: 100%;
   font-size: 12px;
 }
 
@@ -150,11 +149,10 @@ input[type="submit"] {
     background-color: #ffffff;
     color: #777777;
     border: 0;
-    padding: 10px;
+    padding: 15px;
     cursor: pointer;
 }
 
-.attachment-button:hover {
-    opacity: 0.8;
+input[type="submit"] {
+    visibility: collapse;
 }
-
