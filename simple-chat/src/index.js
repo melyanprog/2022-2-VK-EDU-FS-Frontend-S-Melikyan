@@ -10,7 +10,8 @@ document.addEventListener(
   getMesagesFromLocalStorage.bind(this)
 );
 
-function handleSubmit() {
+function handleSubmit(event) {
+  event.preventDefault();
   if (!input.value) return;
   const message = {
     text: input.value,
