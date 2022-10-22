@@ -14,10 +14,7 @@ function handleSubmit(event) {
   event.preventDefault();
   const message = {
     text: input.value,
-    time: `${new Date().toLocaleTimeString("ru", {
-      hour: "numeric",
-      minute: "numeric",
-    })}`,
+    time: `${new Date().getHours()}:${new Date().getMinutes()}`,
   };
   createMessage(message);
   saveMessageToLocalStorage(message);
@@ -55,14 +52,14 @@ function createMessage(message) {
 }
 
 function saveMessageToLocalStorage(message) {
-  let messages = localStorage.getItem("messages") || "[]";
+  let messages = localStorage.getItem("messages");
   messages = JSON.parse(messages);
   messages.push(message);
   localStorage.setItem("messages", JSON.stringify(messages));
 }
 
 function getMesagesFromLocalStorage() {
-  let messages = localStorage.getItem("messages") || "[]";
+  let messages = localStorage.getItem("messages");
   messages = JSON.parse(messages);
   for (const message of messages) {
     createMessage(message);
