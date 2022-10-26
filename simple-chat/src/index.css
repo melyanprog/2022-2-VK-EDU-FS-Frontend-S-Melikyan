@@ -1,8 +1,14 @@
-html, body {
+html{
+    box-sizing: border-box;
+}
+
+body {
     margin: 0;
+    display: flex;
+    flex-direction: column;
     padding: 0;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    
 }
 
 *,
@@ -83,7 +89,9 @@ html, body {
 .message {
     display: flex;
     width: fit-content;
-    border-radius: 5px;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
     border: 1px solid #bcb7be;
     flex-direction: column;
     row-gap: 5px;
@@ -91,15 +99,13 @@ html, body {
 
 .left {
     background-color: #ffffff;
-    padding: 12px 12px 0 12px;
-    margin: 7px 7px auto 7px;
+    align-self: flex-start;
     border-bottom-left-radius: 0;
 }
 
 .right {
     background-color: #f3e5f5;
-    padding: 12px 12px 0 12px;
-    margin: 7px 7px 7px auto;
+    align-self: flex-end;
     border-bottom-right-radius: 0;
 }
 
