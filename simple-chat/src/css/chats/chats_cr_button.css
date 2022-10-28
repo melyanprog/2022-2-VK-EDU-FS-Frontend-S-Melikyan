@@ -2,7 +2,6 @@
     position: absolute;
     bottom: 20px;
     right: 20px;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
     width: 65px;
     height: 65px;
     border-radius: 50px;
@@ -11,6 +10,14 @@
     color: white;
     cursor: pointer;
     padding: 0;
-    transform: scale(1);
-    transition: all 0.2s;
+    box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+    animation: pulse 2s infinite;
   }
+
+.create-button :hover{
+    animation: none;
+}
+
+.create-button :active{
+  animation: none;
+}
