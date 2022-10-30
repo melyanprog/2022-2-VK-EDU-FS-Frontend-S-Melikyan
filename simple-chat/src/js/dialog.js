@@ -26,7 +26,7 @@ function handleSubmit(event) {
   if (!input.value) return;
   const message = {
     text: input.value,
-    time: `${new Date().getHours()}:${new Date().getMinutes()}`,
+    time: new Date().toTimeString().replace(/:[0-9]{2,2} .*/, ""),
   };
   createMessage(message);
   saveMessageToLocalStorage(message);

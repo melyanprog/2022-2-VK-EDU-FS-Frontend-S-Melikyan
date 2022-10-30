@@ -10,14 +10,29 @@
     color: white;
     cursor: pointer;
     padding: 0;
-    box-shadow: 0 0 0 rgba(204,169,44, 0.4);
+    box-shadow: 0 0 0 rgba(81, 67, 18, 0.4);
     animation: pulse 2s infinite;
   }
 
-.create-button :hover{
-    animation: none;
+.create-button:hover{
+  opacity: 1;
+  transform: scale(1.05);
 }
 
-.create-button :active{
-  animation: none;
+.create-button:active{
+  opacity: 1;
+  transform: scale(1);
 }
+
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 1),
+      0 0 0 0 rgb(121, 25, 134);
+  }
+
+  to {
+    box-shadow: 0 0 0 0.65em rgba(255, 255, 255, 1),
+      0 0 0 1em rgba(101, 119, 134, 0);
+  }
+}
+

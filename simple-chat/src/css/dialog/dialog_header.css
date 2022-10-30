@@ -58,11 +58,11 @@
 .back-button:hover,
 .more-button:hover,
 .search-button:hover{
-  background-color: #801386;
+    background-color: #911497;
 }
 
 .back-button:active,
 .more-button:active,
 .search-button:active{
-  background-color: #801386;
+    background-color: #911497;
 }

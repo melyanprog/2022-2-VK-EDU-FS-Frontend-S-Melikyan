@@ -2,7 +2,7 @@ header{
     display: flex;
     align-items: center;
     background-color: #791e92;
-    padding: 2vh;
+    padding: 1vh;
 }
 
 .search-button,
@@ -22,12 +22,12 @@ header{
 
 .search-button:hover,
 .menu-button:hover {
-  background-color: #801386;
+  background-color: #911497;
 }
 
 .search-button:active,
 .menu-button:active {
-  background-color: #801386;
+  background-color: #911497;
 }
 
 .title {

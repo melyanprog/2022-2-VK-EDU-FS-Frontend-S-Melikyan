@@ -21,12 +21,15 @@
       background-color: #ffffff;
       align-self: flex-start;
       border-bottom-left-radius: 0;
+      animation: left 0.5s;
   }
   
   .right {
       background-color: #f3e5f5;
       align-self: flex-end;
       border-bottom-right-radius: 0;
+      animation: right 0.5s;
+
   }
   
   .text {
@@ -48,4 +51,28 @@
   .status .material-icons,
   .done-all{
       color: #6e2d84;
+  }
+
+  @keyframes right {
+    from {
+      transform: scale(0);
+      transform-origin: bottom right;
+    }
+  
+    to {
+      transform: scale(1);
+      transform-origin: bottom right;
+    }
+  }
+  
+  @keyframes left {
+    from {
+      transform: scale(0);
+      transform-origin: bottom left;
+    }
+  
+    to {
+      transform: scale(1);
+      transform-origin: bottom left;
+    }
   }
