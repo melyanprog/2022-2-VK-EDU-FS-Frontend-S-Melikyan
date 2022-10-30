@@ -1,0 +1,24 @@
+header{
+    display: flex;
+    align-items: center;
+    background-color: #791e92;
+    padding: 2vh;
+}
+
+.search-button,
+.menu-button{
+    width: 70px;
+    padding: 0;
+    border: none;
+    background-color: #791e92;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.title {
+    flex: 1;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+}

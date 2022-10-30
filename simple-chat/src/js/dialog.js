@@ -1,14 +1,25 @@
-import "./index.css";
+import "../css/main.css";
+import "../css/dialog/dialog_header.css";
+import "../css/dialog/dialog_container.css";
+import "../css/dialog/dialog_body.css";
+import "../css/dialog/dialog_form.css";
 
 const form = document.querySelector("form");
 const input = document.querySelector(".form-input");
 const chat = document.querySelector(".chat-body");
+const back_button = document.querySelector(".back-button");
 
 form.addEventListener("submit", handleSubmit.bind(this));
 document.addEventListener(
   "DOMContentLoaded",
   getMesagesFromLocalStorage.bind(this)
 );
+
+back_button.addEventListener("click", goToChats.bind(this));
+
+function goToChats(event) {
+  window.location.href = "./chats.html";
+}
 
 function handleSubmit(event) {
   event.preventDefault();
