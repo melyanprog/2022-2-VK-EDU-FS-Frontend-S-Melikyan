@@ -42,11 +42,27 @@
 .back-button,
 .search-button,
 .more-button{
-  width: 70px;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  border-radius: 10px;
   padding: 0;
+  margin: 5px;
   border: none;
   background-color: #791e92;
   color: white;
   cursor: pointer;
   transition: background-color 0.2s;
+}
+
+.back-button:hover,
+.more-button:hover,
+.search-button:hover{
+    background-color: #911497;
+}
+
+.back-button:active,
+.more-button:active,
+.search-button:active{
+    background-color: #911497;
 }
