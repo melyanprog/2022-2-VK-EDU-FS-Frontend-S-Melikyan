@@ -3,7 +3,7 @@ import "../css/chats/chats_header.css";
 import "../css/chats/chats_body.css";
 import "../css/chats/chats_cr_button.css";
 
-const chat = document.querySelector(".chats");
+const chat = document.querySelector(".chat");
 const msg = document.querySelector(".message");
 const time = document.querySelector(".time");
 
